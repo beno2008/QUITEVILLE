@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loony</title>
+
+<link rel="stylesheet" href="../style.css">
+
+<style>
+body{
+  transition: opacity 0.4s ease, filter 0.4s ease;
+}
+.profile{
+max-width:900px;
+margin:auto;
+padding:40px;
+}
+.tv-off{
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    filter: grayscale(100%);
+    transition: all 0.6s ease;
+}
+.tv-off p{
+    color :white
+}
+.tv-container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    cursor:pointer;
+    gap:6px;
+}
+
+.tv-label{
+    font-size:12px;
+    color:#aaa;
+}
+
+.tv-switch{
+    width:80px;
+    height:34px;
+    background:#333;
+    border-radius:50px;
+    position:relative;
+    transition:0.4s;
+}
+
+.tv-knob{
+    width:28px;
+    height:28px;
+    background:white;
+    border-radius:50%;
+    position:absolute;
+    top:3px;
+    left:4px;
+    transition:0.4s;
+}
+.tv-state{
+    font-size:12px;
+    color:#aaa;
+}
+
+/* ON STATE */
+.tv-container.active .tv-switch{
+    background:#838383;
+}
+
+.tv-container.active .tv-knob{
+    transform:translateX(44px);
+}
+
+.tv-container.active .tv-state{
+    content:"ON";
+}
+
+.tv-container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:6px
+}
+
+.tv-label,.tv-state{font-size:.75rem;
+    color:#ddd
+}
+
+.tv-switch{
+    width:70px;
+    height:34px;
+    border-radius:40px;
+    background:#444;
+    position:relative
+}
+
+.tv-knob{position:absolute;
+    left:4px;
+    top:4px;
+    width:26px;
+    height:26px;
+    border-radius:50%;
+    background:#fff;
+    transition:.3s;
+}
+
+.tv-container.active .tv-switch{
+    background:#888
+}
+
+.tv-container.active .tv-knob{
+    transform:translateX(36px);
+}
+
+.character-image{
+height:420px;
+background:#8b5e44;
+border-radius:20px;
+margin-bottom:30px;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.back{
+display:inline-block;
+margin-bottom:25px;
+text-decoration:none;
+font-weight:bold;
+color:#ffffff;
+}
+
+p{
+margin-top:20px;
+line-height:1.8;
+}
+
+img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  justify-content: center;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+p{
+padding:20px;
+background:rgba(255,255,255,.08);
+border:1px solid rgba(255,255,255,.15);
+border-radius:22px;
+backdrop-filter:blur(18px)
+}
+</style>
+
+</head>
+
+<body data-page="loony" class="tv-on">
+
+<header>
+
+<a class="logo" href="../index.html">Home</a>
+
+<h1>Loony</h1>
+
+    <div class="tv-container" id="tvButton">
+
+        <span class="tv-label">Television</span>
+
+        <div class="tv-switch">
+            <div class="tv-knob"></div>
+        </div>
+
+        <span class="tv-state">ON</span>
+
+    </div>
+
+</header>
+
+<div class="profile">
+
+<a class="back" href="../index.html">← Back</a>
+
+<div class="character-image">
+  <img src="../images/loony-face.PNG" id="loonyinfo">
+</div>
+
+<h1>Loony</h1>
+
+<p>
+    
+لوني توأم توني ، يحب الاستهبال بهدف المزح و نشر السعادة ، و يمكننا رؤيته على هيئة بشر عند تشغيل التلفاز
+
+
+</p>
+
+<p>
+Loony , Toony's twin brother; he loves to prank and spread joy, and we can see him in human form when the television is on.
+</p>
+
+</div>
+
+<script src="../script.js"></script>
+
+</body>
+</html>
