@@ -109,10 +109,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-function changeImage(img) {
-    document.getElementById("mainImg").src = img.src;
-}
-
 function downloadFile(filePath) {
     const link = document.createElement("a");
     link.href = filePath;
